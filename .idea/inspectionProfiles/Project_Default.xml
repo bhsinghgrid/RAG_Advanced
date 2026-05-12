@@ -1,0 +1,25 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="datasets" />
+          <option value="" />
+          <option value="torch" />
+          <option value="transformers" />
+          <option value="tokenizers" />
+          <option value="gradio" />
+          <option value="bert-score" />
+          <option value="pyyaml" />
+          <option value="tqdm" />
+          <option value="accelerate" />
+          <option value="wandb" />
+          <option value="pip" />
+          <option value="setuptools" />
+          <option value="future" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

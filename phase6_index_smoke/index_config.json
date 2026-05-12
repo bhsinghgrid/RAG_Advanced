@@ -1,0 +1,14 @@
+{
+  "pdf_path": "ifc-annual-report-2024-financials.pdf",
+  "encoder": "hash",
+  "model_name": "google/siglip-base-patch16-224",
+  "hf_local_only": false,
+  "hash_seed": 0,
+  "hash_max_tokens": 128,
+  "device": "cpu",
+  "page_dpi": 150,
+  "patch_size": 512,
+  "patch_overlap": 0,
+  "max_pages": 1,
+  "proj_dim": 128
+}

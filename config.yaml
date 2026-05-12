@@ -1,0 +1,20 @@
+pdf:
+  path: "ifc-annual-report-2024-financials.pdf"
+
+chunking:
+  size: 1000
+  overlap: 200
+
+gcp:
+  project_id: "gd-gcp-gridu-genai"
+  location: "us-central1"
+
+embeddings:
+  model_name: "text-embedding-004"
+  batch_size: 5
+
+llm:
+  model_name: "gemini-2.0-flash"
+
+vectorstore:
+  dimension: 768

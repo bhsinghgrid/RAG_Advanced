@@ -1,0 +1,7 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+The plugin langchain_docling will not be loaded because Docling is being executed with allow_external_plugins=false.
+The plugin langchain_docling will not be loaded because Docling is being executed with allow_external_plugins=false.
+[32m[INFO] 2026-05-03 13:32:15,196 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2026-05-03 13:32:15,197 [RapidOCR] device_config.py:57: Using CPU device[0m
+[32m[INFO] 2026-05-03 13:32:15,204 [RapidOCR] download_file.py:60: File exists and is valid: /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/rapidocr/models/ch_PP-OCRv4_det_mobile.pth[0m
+[32m[INFO] 2026-05-03 13:32:15,205 [RapidOCR] main.py:50: Using /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/rapidocr/models/ch_PP-OCRv4_det_mobile.pth[0m
