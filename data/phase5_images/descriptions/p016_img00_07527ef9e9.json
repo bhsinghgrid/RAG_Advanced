@@ -1,0 +1,19 @@
+{
+  "image_type": "chart",
+  "title": null,
+  "x_axis": null,
+  "y_axis": null,
+  "legend": null,
+  "key_values": {
+    "Value 1": "31,114",
+    "Value 2": "14,482",
+    "Value 3": "(7,894)",
+    "Value 4": "(1,414)",
+    "Value 5": "202",
+    "Value 6": "(92)",
+    "Value 7": "(356)",
+    "Value 8": "(105)",
+    "Value 9": "36,437"
+  },
+  "summary": "The chart displays a waterfall chart with values: 31,114, 14,482, (7,894), (1,414), 202, (92), (356), (105), and 36,437."
+}

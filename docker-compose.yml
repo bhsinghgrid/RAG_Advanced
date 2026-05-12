@@ -1,0 +1,57 @@
+services:
+  # ── RAG Application ──────────────────────────────────────────────────────
+  rag-app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8515:8501"
+    volumes:
+      - .:/app
+    environment:
+      - GCP_PROJECT_ID=${GCP_PROJECT_ID}
+      - GCP_LOCATION=${GCP_LOCATION}
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/.google_credentials.json
+    env_file:
+      - .env
+    depends_on:
+      - qdrant
+    restart: unless-stopped
+
+  # ── Qdrant vector database ───────────────────────────────────────────────
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"   # REST
+      - "6334:6334"   # gRPC
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+
+  # ── Langfuse observability ───────────────────────────────────────────────
+  langfuse-server:
+    image: langfuse/langfuse:2
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://langfuse:langfuse@langfuse-db:5432/langfuse
+      NEXTAUTH_SECRET: secret
+      SALT: salt
+      NEXTAUTH_URL: http://localhost:3000
+    depends_on:
+      - langfuse-db
+    restart: unless-stopped
+
+  langfuse-db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: langfuse
+      POSTGRES_PASSWORD: langfuse
+      POSTGRES_DB: langfuse
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  qdrant_data:
+  pg_data:
